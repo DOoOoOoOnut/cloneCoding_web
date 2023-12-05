@@ -1,0 +1,43 @@
+header {}
+header h1 {}
+header h1 a {}
+header h1 a img {}
+/* 다 써야하나? */
+header #lnb {}
+header #lnb .active {}
+header #lnb a {}
+header #snb {}
+header #snb a {}
+header .path {}
+header .path dd {}
+header .path dd em {}
+/* 메인 */
+main {} 
+main h1 {} 
+main h1 p {} 
+main h1 .bg {} 
+/* 비전 */
+main .vision {} 
+main .vision h2 {} 
+main .vision h2 p {} 
+/* goal */
+main .goal_strategy {} 
+main .goal_strategy h2 {} 
+main .goal_strategy .goal {} 
+main .goal_strategy .goal .first {} 
+main .goal_strategy .goal li {} 
+main .goal_strategy .goal .last {} 
+/* strategy */
+main .goal_strategy .strategy {} 
+main .goal_strategy .strategy li {} 
+main .goal_strategy .strategy li h3 {} 
+main .goal_strategy .strategy li p {}
+/* 하단 */
+footer {} 
+footer #top {} 
+footer #top #left {} 
+footer #top #left a {} 
+footer #top #right {} 
+footer #top #right a {} 
+footer address {} 
+footer .copyright {} 
