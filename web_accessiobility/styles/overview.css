@@ -9,12 +9,14 @@ main {
     width: 850px;
     border: 1px solid #ddd;
     margin: 100px 0 0 50px;
+    background: url(../images/bg.png) no-repeat 300px 80px;
+    background-size: 600px auto;
 }
 main .title_path {
     border-bottom: 1px solid #ddd;
     padding: 25px 20px;
 }
-main .title_path h1 {font-size: 1.125rem;}
+main .title_path h1 {font-size: 1.125rem; display: inline-block;}
 main .title_path .path {}
 main .title_path .path dd {font-size: 0.688rem;}
 main .title_path .path dd img {}
