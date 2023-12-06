@@ -9,3 +9,9 @@
 ## SPC 삼립 클론코딩
 * 23/12/05 HTML5 구조 작업
 * 23/12/06 CSS3 디자인 작업
+### style guide 
+* 색상 -> 
+글자 #000 / 포인트글자 #36b4e5/ #fff / #f3c300 / #aaa / #f1f1f1
+제목 40px
+부제목 21px
+내용 18px 큰 내용 31 / goal 내용 24/ strategy 18px 16px / 메뉴, 경로 16px

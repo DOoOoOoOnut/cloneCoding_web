@@ -2,42 +2,114 @@ header {}
 header h1 {}
 header h1 a {}
 header h1 a img {}
-/* 다 써야하나? */
 header #lnb {}
-header #lnb .active {}
+header #lnb .active {
+    color: #36b4e5;
+}
 header #lnb a {}
 header #snb {}
 header #snb a {}
-header .path {}
+header .path {
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    background-color: #f1f1f1;
+    padding: 20px 50px;
+    text-align: right;
+}
 header .path dd {}
-header .path dd em {}
+header .path dd a {}
+header .path dd em {
+    font-weight: 800;
+}
 /* 메인 */
-main {} 
-main h1 {} 
-main h1 p {} 
-main h1 .bg {} 
+main {
+    text-align: center;
+} 
+main h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 50px 0 20px 0;
+} 
+/* main > p {margin-bottom: 40px;}  */
+main h1+p {margin-bottom: 40px;} 
+main .bg {
+    line-height: 1.7;
+    background-color: #f1f1f1;
+    padding: 40px 0;
+} 
 /* 비전 */
-main .vision {} 
-main .vision h2 {} 
-main .vision h2 p {} 
+main .vision {
+    padding: 40px 0;
+} 
+main .vision h2 {
+    color: #36b4e5;
+    font-size: 1.313rem;
+    margin-bottom: 20px;
+} 
+main .vision p {
+    font-size: 1.938rem;
+    line-height: 1.5;
+} 
+main .vision .first {margin-bottom: 60px;}
 /* goal */
-main .goal_strategy {} 
-main .goal_strategy h2 {} 
-main .goal_strategy .goal {} 
-main .goal_strategy .goal .first {} 
-main .goal_strategy .goal li {} 
-main .goal_strategy .goal .last {} 
+main .goal_strategy {
+    background-color: #f1f1f1;
+    padding: 40px 0;
+} 
+main .goal_strategy h2 {
+    font-size: 1.313rem;
+    margin-bottom: 20px;
+} 
+/* 전체 선택자 넣어주고 나서 세부 선택자 넣어주기
+. 클래스 앞에 어떤 태그인지 생략되어 있음 -> 아래처럼 전체 넣기 */
+main .goal_strategy ul {}
+main .goal_strategy ul li {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-right: -10px;
+}
+
+main .goal_strategy .goal {
+    margin-bottom: 50px;
+} 
+/* 수평정렬 시에 가운데 기준으로 display 넣어주기! 묶고있는 태그에 넣는거 아님 */
+main .goal_strategy .goal li {
+    background-color: #fff;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 250px; height: 250px;
+    display: inline-block;
+    line-height: 250px;
+    /* line-height 값 수직 중앙 규칙 (내용이 1줄일 경우만 가능) height값과 같은 값 적용하기 */
+} 
+main .goal_strategy .goal .first {
+    background-color: #36b4e5;
+} 
+main .goal_strategy .goal .last {
+    background-color: #f3c300;
+} 
 /* strategy */
 main .goal_strategy .strategy {} 
-main .goal_strategy .strategy li {} 
-main .goal_strategy .strategy li h3 {} 
-main .goal_strategy .strategy li p {}
-/* 하단 */
+main .goal_strategy .strategy li {
+    background-color: #fff;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 40px 10px 0;
+} 
+main .goal_strategy .strategy li h3 {
+    font-size: 1.125rem;
+} 
+main .goal_strategy .strategy li p {line-height: 1.5;}
+/* 하단영역 */
 footer {} 
 footer #top {} 
 footer #top #left {} 
-footer #top #left a {} 
+footer #top #left a {
+    font-weight: 500;
+} 
 footer #top #right {} 
 footer #top #right a {} 
-footer address {} 
+footer address {
+    line-height: 1.7;
+} 
 footer .copyright {} 
