@@ -21,8 +21,10 @@ address,details,mark,time,img,summary,iframe,div {
 /* 목록 태그의 스타일 지우기 */
 ul,ol,li {list-style: none;}
 /* 버튼에 올렸을 때 커서를 포인터(손가락 모양)로 바꾸기 */
-button {cursor: pointer;}
+button {cursor: pointer; background: none; border: 0;}
 /* 보더의 이중 테두리를 한줄로 나오게 함 */
 table,tr,td,th {border-collapse: collapse;}
+fieldset {border:0;}
+input, select, option {background: none; border: 0;}
 /* HTML에서 의미적으로 존재하나 CSS디자인상에선 숨겨야 하는 요소에 사용 ex) label,legend */
 .skip {display: none;}

@@ -1,0 +1,104 @@
+/* Header */
+header {}
+/* Header-top */
+header .top {
+    width: 1151px; height: 48px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    /* 마진 이용해서 항상 가운데로 맞추기 */
+}
+header .top .left {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+}
+header .top .left h1 {}
+header .top .left h1 a {}
+header .top .left h1 a  img {}
+header .top .left a {font-size: 0.875rem; margin-left: 16px;}
+header .top .left a:first-child {margin-left: 0;}
+header .top .right {}
+header .top .right a {font-size: 0.875rem; margin-right: 16px;}
+header .top .right a:first-child {margin-right: 0;}
+/* Header-bottom */
+header .btm {
+    width: 1151px; height: 119px;
+    margin: 0 auto;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .btm h1 {}
+header .btm h1 a {}
+header .btm h1 a img {}
+header .btm #header_middle {}
+header .btm #header_middle fieldset {
+    width: 370px; height: 47px;
+    border: 3px solid #1e6cb3;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 13px 0 21px;
+}
+header .btm #header_middle fieldset input {
+    width: 300px; outline: none;
+}
+header .btm #header_middle fieldset input::placeholder {
+    color: #1e6cb3;
+    font-weight: 500;
+}
+header .btm #header_middle fieldset #search_btn {
+    width: 24px; height: 24px;
+    /*  이미지 크기 조정이 아닌 영역 조정 -> 패딩이 생김  */
+}
+header .btm #header_middle fieldset #search_btn img {}
+header .btm .right {}
+header .btm .right #lang_form {
+    float: right;
+}
+header .btm .right #lang_form fieldset {
+
+}
+header .btm .right #lang_form fieldset #lang {
+    background-color: #fff;
+    font-size: 0.8125rem;
+    width: 98px; height: 28px;
+    border: 1px solid #1e6cb3;
+}
+header .btm .right #lang_form fieldset #lang option {
+    font-size: 0.8125rem;
+}
+header .btm .right #lang_form fieldset #go_btn {
+    background-color: #1e6cb3;
+    font-size: 0.8125rem; font-weight: 700; letter-spacing: ;
+    width: 28px; height: 28px;
+    color: #fff;
+}
+header .btm .right .weather {
+    float: left;
+    clear: both;
+}
+header .btm .right .weather p {
+    font-size: 0.8125rem;
+}
+header .btm .right .weather .current_weather {
+    font-size: 1.5rem; font-weight: 700; letter-spacing: -0.03rem;
+    padding: 5px 0;
+}
+/* MAin 1행 */
+/* MAin 1행 - banner */
+/* MAin 1행 - right(코로나, 교통정보) */
+/* MAin 2행 - 주요서비스 */
+/* MAin 3행 - 배너 */
+/* MAin 4행 - 게시판 */
+/* MAin 4행 - 게시판 -이벤트신청 */
+/* MAin 4행 - 게시판 -이달행사축제 */
+/* MAin 4행 - 게시판 -서비스 */
+/* MAin 5행 - 분야정보 */
+/* MAin 6행 - 새소식 */
+/* footer */
+/* footer -1행 */
+/* footer -2행 */
