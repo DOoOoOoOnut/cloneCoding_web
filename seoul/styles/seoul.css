@@ -100,5 +100,64 @@ header .btm .right .weather .current_weather {
 /* MAin 5행 - 분야정보 */
 /* MAin 6행 - 새소식 */
 /* footer */
+footer {
+    width: 1151px; margin: 0 auto; 
+}
 /* footer -1행 */
+footer .top {
+display: flex; flex-flow: row nowrap;
+justify-content: space-between;
+align-items: center;
+width: 1151px; height: 67px;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #aaa;
+}
+footer .top .menu {}
+footer .top .menu a {
+    margin-right: 16px;
+}
+footer .top .menu a:last-child {margin-right: 0;}
+footer .top .menu a em {}
+footer .top .sns {
+    display: flex; flex-flow: row nowrap;
+}
+footer .top .sns a {
+    background-image: url(../images/icon_sns2/icon_set03.png);
+    background-repeat: no-repeat;
+    width: 25px; height: 25px;
+    text-indent: -9999px;
+    display: block;
+    margin-left: 16px;
+    /* a태그가 인라인이므로 크기가 제대로 인식되지 않음.*/
+    /* 인라인-블록으로 둘 경우 이후 공백이 생길 수 있어 블록으로 처리함 */
+}
+footer .top .sns a:nth-child(1) {margin-left: 0;}
+footer .top .sns a:nth-child(2) {background-position-x: -25px;}
+footer .top .sns a:nth-child(3) {background-position-x: -50px;}
+footer .top .sns a:nth-child(4) {background-position-x: -75px;}
+footer .top .sns a:nth-child(5) {background-position-x: -100px;}
+footer .top .sns a:nth-child(6) {background-position-x: -125px;}
+/* hover */
+footer .top .sns a:hover {background-position-y: -25px;}
 /* footer -2행 */
+footer .btm {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 1151px; height: 105px;
+}
+footer .btm .left {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+}
+footer .btm .left p {}
+footer .btm .left p img {}
+footer .btm .left address {
+    line-height: normal;
+    font-size: 13px;
+    margin-left: 16px;
+}
+footer .btm .banner {}
+footer .btm .banner a {margin-left: 16px;}
+footer .btm .banner a:first-child {margin-left: 0;}
+footer .btm .banner a img {}
