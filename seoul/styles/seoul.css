@@ -89,15 +89,145 @@ header .btm .right .weather .current_weather {
     padding: 5px 0;
 }
 /* MAin 1행 */
+main {} /* 메인에 너비를 줄 경우 메인 안의 모든 자손의 너비가 고정됨 */
+main > * {width: 1151px; margin: 0 auto;} /* 메인의 모든 자손이 아닌 바로 아래 자식들의 너비만 설정 */
+main .bnr {
+    background-color: chartreuse;
+    display: flex; justify-content: space-between;
+}
+main .bnr .left {
+    background-color: blueviolet;
+    width: 770px; 
+    /* 배너 백그라운드 넣어서 정확히 영역 맞는지 확인하기 */
+    position: relative;
+}
+main .bnr .left a {}
+main .bnr .left a img {}
+main .bnr .left .close {
+    padding: 5px 9px;
+    font-size: 0.8125rem; font-weight: 400; color: #fff;
+    border-radius: 3px;
+    background-color: #1e6cb3;
+    position: absolute; right: 15px; bottom: 15px;
+    display: inline-block;
+}
+/* 코로나, 교통정보 */
+main .bnr .right {
+    background-color: aqua;
+    width: 360px; height:230px;
+}
+main .bnr .right .corona {
+    position: relative;
+    display: block;
+}
+main .bnr .right .corona img {}
+main .bnr .right .corona .date {
+    position: absolute; right: 20px; top: 14px;
+    display: inline-block;
+    /* background-color: aqua; */
+}
+/* 30 84 */
+main .bnr .right .corona .data {
+    text-align: center;
+    font-size: 0.8125rem;
+    position: absolute; 
+    color: #fff;
+    display: inline-block;
+    /* background-color: bisque; */
+}
+main .bnr .right .corona .data:nth-child(3) {
+    width: 140px; 
+    top: 84px; left: 30px;
+} /* 확진자 */
+main .bnr .right .corona .data:nth-child(4) {
+    width: 140px; 
+    top: 84px; left: 191px;
+} /* 추가확진자 */
+main .bnr .right .corona .data:nth-child(5) {
+    width: 94px; 
+    top: 156px; left: 30px;
+} /* 퇴원 */
+main .bnr .right .corona .data:nth-child(6) {
+    width: 94px; 
+    top: 156px; left: 145px;
+} /* 추가퇴원 */
+main .bnr .right .corona .data:nth-child(7) {
+    width: 59px; 
+    top: 156px; left: 269px;
+} /* 사망 */
+main .bnr .right .traffic {}
+main .bnr .right .traffic img {}
 /* MAin 1행 - banner */
 /* MAin 1행 - right(코로나, 교통정보) */
 /* MAin 2행 - 주요서비스 */
+main .service {
+    /* background-color: aqua; */
+}
+main .service .title {
+    display: flex;
+    justify-content: space-between;
+}
+main .service .title h2 {}
+main .service .title a {
+    display: block;
+}
+/* 아래 */
+main .service .contents {
+    /* background-color: #1e6cb3; */
+    display: flex;
+}
+main .service .contents a {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 9.09%; 
+}
+main .service .contents a img {
+    width: 60px; margin: 0 auto;
+}
+/* margin: 0 auto -> 대상의 너비가 지정되어 있을 때 너비를 자동으로 조정 */
+main .service .contents a span {
+    font-size: 0.8125rem;
+}
 /* MAin 3행 - 배너 */
+main .bnr_bg {
+    background-color: #eff4f8;
+    width: 1920px;
+} /* 배경 디자인용 */
+main .bnr_bg .bnr {
+    width: 1151px; margin: 0 auto;
+    display: flex;
+} /* 1151px 내용 */
+main .bnr_bg .bnr a {
+    display: block;
+}
+main .bnr_bg .bnr a img {}
 /* MAin 4행 - 게시판 */
 /* MAin 4행 - 게시판 -이벤트신청 */
 /* MAin 4행 - 게시판 -이달행사축제 */
 /* MAin 4행 - 게시판 -서비스 */
 /* MAin 5행 - 분야정보 */
+.info {}
+.info .title {
+    display: flex; justify-content: space-between;
+}
+.info .title h2 {
+    font-size: 1.5rem;
+}
+.info .title a {
+    border:1px solid #aaa;
+    padding: 3px 11px;
+    font-size: 0.8125rem;
+}
+.info .contents {
+    display: flex;
+}
+.info .contents a {
+    display: flex; 
+    /* a에게 display:flex 적용하면 span에 display:block을 쓴 것과 같은 의미로 적용된다. */
+    flex-flow: column nowrap;
+}
+.info .contents a img {text-align: center;}
+.info .contents a img span {}
 /* MAin 6행 - 새소식 */
 /* footer */
 footer {

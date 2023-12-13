@@ -66,7 +66,7 @@
             <div class="right">
                 <a href="#" class="corona">
                     <img src="./images/bg_corona.gif" alt="코로나19 발생동향 전체보기">
-                    <span class="date">20.08.18.00</span>
+                    <span class="date">20.08.18.00시 기준</span>
                     <span class="data" title="확진자">2,209</span>
                     <span class="data" title="추가 확진자">132</span>
                     <span class="data" title="퇴원">1,573</span>
@@ -79,7 +79,7 @@
             </div>
         </section>
         <!-- 2행 주요서비스 -->
-        <section class="main_service">
+        <section class="service">
             <div class="title">
                 <h2>주요 서비스</h2>
                 <a href="#">전체 사이트</a>
@@ -99,10 +99,18 @@
             </div>
         </section>
         <!-- 3행 코로나배너 -->
-        <div class="bnr_corona">
+        <!-- <div class="bnr_corona">
             <img src="./images/banner_01.jpg" alt="코로나 19 선제검사 신청">
             <img src="./images/banner_02.jpg" alt="집담감염 위험 준수사항 위반 신고">
             <img src="./images/banner_03.jpg" alt="코로나 19 생활경제 지원 정책">
+        </div> -->
+        <!-- 정해진 사이트 너비(1151px) 바깥쪽으로 배경이 존재하는 경우 배경용 div를 따로 제작한다. -->
+        <div class="bnr_bg"><!-- 배경 디자인용 -->
+            <div class="bnr"><!-- 1151px 내용 부모 -->
+                <a href="#"><img src="./images/banner_03.jpg" alt="코로나 19 선제검사 신청"></a>
+                <a href="#"><img src="./images/banner_02.jpg" alt="집단감염 위험 준수사항 위반 신고"></a>
+                <a href="#"><img src="./images/banner_01.jpg" alt="코로나 19 생활경제 지원 정책"></a>
+            </div>
         </div>
         <!-- 4행 게시판 -->
         <ul class="notice">
@@ -144,7 +152,10 @@
         </ul>
         <!-- 분야별 정보 -->
         <section class="info">
-            <h1>분야별 정보</h1>
+            <div class="title">
+                <h2>분야별 정보</h2>
+                <a href="#">전체 사이트</a>
+            </div>
             <div class="contents">
                 <a href="#"><img src="./images/icon_set/shorcut_icon_set_01.png" alt="#"><span>주택</span></a>
                 <a href="#"><img src="./images/icon_set/shorcut_icon_set_03.png" alt="#"><span>경제</span></a>
