@@ -14,35 +14,110 @@ header nav a:last-child {margin-right: 0;}
 header .recruitment {color: #fff}
 header .recruitment .fa-circle-chevron-right {color: #17a2b8;}
 /* main */
-main {}
+main {
+    background-color: #f1f1f1;
+    padding-bottom: 40px;
+}
 /* 1행 비디오, 로고 */
-main .visual {}
-main .visual video {}
-main .visual .logo {}
+main .visual {
+    height: 650px; overflow: hidden;/* 부모에서 비디오 보이는 부분 제한하고 넘치는 부분 숨기기 */
+    position: relative;
+    background-color: aquamarine;
+}
+main .visual video {width: 100%;}
+main .visual .logo {
+    border: 5px solid yellow;
+    position: absolute; left: 0; top:25%; z-index: 50;
+    width: 100%; /* absolute 주면 블록이라도 너비가 깨짐. 넓이 100퍼속성 같이 주는게 좋음 */
+    text-align: center; 
+}
 main .visual .logo img {}
 /* 2행 뉴스, 파트너십 */
+main .board, main .gallery  {
+    max-width: 1200px; margin: 40px auto 0;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    /* margin-bottom: 40px; */
+}
+main .board a, main .gallery a {
+    background-color: #fff; 
+    display: flex; flex-flow: column nowrap;
+    border-radius: 5px;
+    width:calc(100% / 3 - 40px / 3);
+    padding: 15px;
+    
+}
+.category {
+    font-weight: 500px;
+    margin-bottom: 10px;
+}
+.contents {
+    color: #aaa;
+    line-height: 1.7;
+}
+main .board a h2, main .gallery a h2 {
+    font-size: 1.5rem; font-weight: 900;
+    line-height: 1.4; letter-spacing: -0.2px;
+    color: #333;
+} 
 main .board {}
 main .board a {}
 main .board a .category {}
 main .board a h2 {}
+main .board a:nth-child(1) h2 {padding-bottom: 50px;}
 main .board a .contents {}
+main .board a:nth-child(2) .contents {color: #333;}
 /* 3행 서비스, 커리어 */
 main .gallery {}
 main .gallery a {}
 main .gallery a .category {}
-main .gallery a .photo {}
-main .gallery a .photo img {}
-main .gallery a .contents {}
-main .gallery a h2 {}
+main .gallery a .photo {
+    margin-bottom: 20px;
+}
+main .gallery a .photo img {width: 100%;} /* 이미지는 인라인이지만 기본적으로 가지고 있던 픽셀값이 크기로 인식된다. 즉, 이렇게 적어줘야 부모 크기에 맞춰 들어간다. */
+main .gallery a .contents {padding: 0 15px;}
+main .gallery a h2 {padding: 0 15px;}
 /* footer */
-footer {}
+footer {border-top: 1px solid #777; padding:40px 0}
 /* 1행 개인정보처리방침~관련사이트 */
-footer .top {}
+footer .top, footer address {border: 2px; max-width: 1200px;} 
+footer .top {display: flex; flex-flow: row nowrap;
+    justify-content: space-between; 
+    padding: 15px 0;
+}
 footer .top .f_nav {}
 footer .top .f_nav a {}
-footer .site {}
-footer .site > a {}
-footer .site .sub {}
-footer .site .sub a {}
+/* 구분선 만들기~~~~!!!!! */
+footer .top .f_nav a::after {
+    content:''; display: inline-block;
+    width: 1px; height: 12px; background-color: #aaa;
+    margin: 0 4px 0 7px;
+}
+footer .top .f_nav a:last-child::after {display: none;}
+footer .top .site {
+    position: relative; 
+    /* border: 1px solid red; */
+    display: block; justify-content: center;
+}
+footer .top .site > a {
+    background-color: #222; color: white;
+    display: inline-block; border-radius: 5px; padding: 7px 10px; 
+}
+footer .top .site .sub {
+    position: absolute; right: 0; top: -95px;
+    border: 1px solid #aaa;  border-radius: 5px;
+    background-color:#fff;
+    display: flex; flex-flow: column nowrap;
+    width: 160px;
+    display: none;
+}
+footer .top .site .sub a {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+footer .top .site:hover .sub {display: flex;}
 /* 2행 주소 */
-footer address {}
+footer address {
+    color: #777; line-height: 1.7;
+    padding-left: 20px;
+}
