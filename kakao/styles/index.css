@@ -26,7 +26,7 @@ main .visual {
 }
 main .visual video {width: 100%;}
 main .visual .logo {
-    border: 5px solid yellow;
+    /* border: 5px solid yellow; */
     position: absolute; left: 0; top:25%; z-index: 50;
     width: 100%; /* absolute 주면 블록이라도 너비가 깨짐. 넓이 100퍼속성 같이 주는게 좋음 */
     text-align: center; 
