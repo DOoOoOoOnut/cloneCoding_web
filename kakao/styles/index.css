@@ -1,3 +1,4 @@
+* {transition: all 1s;}
 /* header */
 header {
     padding: 0 20px; height: 60px;
@@ -22,7 +23,7 @@ main {
 main .visual {
     height: 650px; overflow: hidden;/* 부모에서 비디오 보이는 부분 제한하고 넘치는 부분 숨기기 */
     position: relative;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 main .visual video {width: 100%;}
 main .visual .logo {
