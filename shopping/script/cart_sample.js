@@ -64,10 +64,13 @@ del.addEventListener('click',function(){
 //변수
 const pop3 = detail.querySelector('.benefit_shipping .delivery_menu');
 const open = detail.querySelector('.benefit_shipping .delivery_menu_open');
-console.log(pop3, open)
+const down = pop3.querySelector('i[class$=down]')
+console.log(pop3, open, down)
 // 안보이게
 open.style = 'display:none';
 //실행
 pop3.addEventListener('click',function(){
-    open.style = 'display:block; border-radius: none;'
+    open.style = 'display:block;'
+    pop3.style = 'border-bottom-left-radius: 0; border-bottom-right-radius: 0;'
+    down.style = 'transform: rotate(180deg);'
 })
