@@ -1,0 +1,141 @@
+/* Firefox */
+html {scrollbar-width: 10px;;scrollbar-color: #222 #f1f1f1;}
+/* Opera */
+html::-o-scrollbar {width: 10px;}/*스크롤바 크기*/
+html::-o-scrollbar-thumb {background-color: #222;border-radius: 5px;}/*스크롤 드래그바*/
+html::-o-scrollbar-thumb:hover {background-color: #555;}
+/* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+::-webkit-scrollbar {display: none;}/*스크롤바 크기*/
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}/*스크롤바 배경*/
+::-webkit-scrollbar-thumb {background-color: #4864ff;border-radius: 50%;}/*스크롤 드래그바*/
+::-webkit-scrollbar-thumb:hover {background-color: #555;}
+/* 인스타그램 CSS */
+/* --------layout */
+#instargram {
+    max-width: 480px;
+    /* height: 90vh; overflow: hidden; */
+    margin: 50px auto 0;
+    border: 1px solid #eee;
+}
+#instargram main {
+    height: 700px; overflow-y: scroll; overflow-x: hidden;
+}
+#instargram main section {margin-bottom: 20px;}
+/* --------nav */
+#instargram nav {
+    display: flex; justify-content: space-between; align-items: center;
+    /* position: fixed; left: 50%; transform: translateX(-50%);
+    /* position: fixed; left: 50%; transform: translateX(-50%); */
+    /* fixed나 absolute일 때 가운데로 보내는 명령어 */
+    bottom: 0; z-index: 100; width: 480px; */
+}
+#instargram nav a {
+    width: calc(100% / 5);
+    text-align: center; padding: 30px 0;
+}
+#instargram nav a i[class*=fa] {font-size: 24px;}
+/* section 게시글 */
+/* section 게시글---상단(프로필)*/
+#instargram main section .profile_top {
+    display: flex; justify-content: space-between; align-items: center;
+    height: 50px; padding: 0 10px;
+}
+#instargram main section .profile_top .name{
+    display: flex;
+}
+#instargram main section .profile_top .name .photo{
+    width: 25px; height: 25px; overflow: hidden;
+    border-radius: 50%;
+}
+#instargram main section .profile_top .name .photo img{
+    width: 290%; transform: translate(-21px, -7px);
+}
+#instargram main section .profile_top .name .id{margin-left: 10px;}
+#instargram main section .profile_top .right {display: flex; align-items: center;}
+#instargram main section .profile_top .right a{}
+#instargram main section .profile_top .right a.link{
+    background: #555; color: #fff; border-radius: 8px;
+    padding: 5px 10px; margin-right: 5px; font-size: 0.81rem;
+}
+#instargram main section .profile_top .right a.more{}
+#instargram main section .profile_top .right a.more i[class$=ellipsis]{}
+/* section 게시글-----상단(사진) */
+#instargram main section .photo_all {
+    height: 500px; overflow: hidden;
+}
+#instargram main section .photo_all .photo {}
+#instargram main section .photo_all .photo img {}
+#instargram main section .photo_all .photo1 {}
+#instargram main section .photo_all .photo2 {}
+#instargram main section .photo_all .photo1 img {}
+#instargram main section .photo_all .photo2 img {}
+/* section 게시글-----내용(좋아요/공유/북마크 등) */
+#instargram main section .container {}
+#instargram main section .container .menu_top {
+    display: flex; justify-content: space-between; align-items: center;
+    height: 40px; padding: 0 10px;
+    position: relative; margin-top: 5px;
+}
+#instargram main section .container .menu_top > div {
+}
+#instargram main section .container .menu_top .left {
+    display: flex; 
+    justify-content: space-between;
+}
+#instargram main section .container .menu_top .left a {
+    display: block; margin-right: 15px;
+}
+#instargram main section .container .menu_top .left a.like {}
+#instargram main section .container .menu_top .left a.like img {width: 27px;}
+#instargram main section .container .menu_top .left a img {
+    width: 24px;
+}
+#instargram main section .container .menu_top .left a.comment {}
+#instargram main section .container .menu_top .left a.comment i {
+    font-size: 24px;
+}
+#instargram main section .container .menu_top .left a.send {
+    margin-right: 0;
+}
+#instargram main section .container .menu_top .left a.send i[class*=paper] {font-size: 24px;}
+#instargram main section .container .menu_top .pagenation {
+    text-align: center; position: absolute; left: 50%; transform: translateX(-50%);
+}
+#instargram main section .container .menu_top .pagenation span {
+    display: inline-block; background-color: #ccc;
+    width: 6px; height: 6px; border-radius: 50%; margin-right: 6px;
+}
+#instargram main section .container .menu_top .pagenation span:last-child {margin-right: 0;}
+#instargram main section .container .menu_top .pagenation .active {
+    background-color: #4864ff;
+}
+#instargram main section .container .menu_top .right {
+    text-align: right;
+}
+#instargram main section .container .menu_top .right .bookmark {
+    
+}
+#instargram main section .container .menu_top .right .bookmark i {
+    font-size: 24px;
+}
+/* section 게시글-----내용(글 내용) */
+#instargram main section .container .contents {
+    padding: 0 10px;
+}
+#instargram main section .container .contents > * {
+    line-height: 1.5;
+}
+#instargram main section .container .contents .like_people {
+    font-weight: 700;
+}
+#instargram main section .container .contents .con {}
+#instargram main section .container .contents .con span {}
+#instargram main section .container .contents .con span.name {
+    font-weight: 600;
+}
+#instargram main section .container .contents .con span.detail {}
+/* section 게시글-----하단(댓글 ~ 날짜) */
+#instargram main section .container .contents .review,
+#instargram main section .container .contents .date {color: #888;}
+#instargram main section .container .contents .review {}
+#instargram main section .container .contents .date {font-size: 0.91rem;}
