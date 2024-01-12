@@ -47,3 +47,25 @@
 3. `img[src*=naver]`,`img[src*=logo]`
 4. `img[src="http://naver.com/logo.jpg"]`
 5. `img[src]`,`img[title]`, `img[alt]`
+
+# 오늘의 집 페이지 동적 기능 정리
+## Javascript(ES6)
+### shopping/script/cart_sample.js
+### 단일 DOM 객체 활용하여 반복 open/close 동적기능 활용하기
+* 중요 Point!
+* javascript는 눈으로 보이는 시각적인 효과(CSS)에 의지하기보단 Data의 상태에 따라 동적 기능을 처리한다. 그래야 Back-end 협업프로젝트의 DataBase에 Data개념으로 연동해서 업무를 효율적으로 진행할 수 있다.
+
+* '상태'라는 중요 개념 잘 이해해야 한다.
+* => css로 조건문 작성하지 말기! css는 data의 상태가 아님.
+---
+1. data 상태 구분 용도 변수 생성하기 `DOMstatus`
+
+2. 해당 변수에 DOM 상태 저장하기 `true`,`false`
+* `DOMstatus = false` // 비활성화 상태인 경우
+
+3. event DOM의 상태에 의해서 `status`값이 변동되는 상황 제작하기 (같은 버튼으로 on/off 조절하는 경우)
+
+* `DOM.addEventListener('event'()=>{DOMstatus = !DOMstatus})`
+* `!DOMstatus` script는 일회성으로 실제 변수 값에 변화를 주지 않음 =>  `DOMstatus` = 대입연산자를 통해서 `!DOMstatus` 반전을 대입해야 한다.
+* 위 `event`에 의해서 `!DOMstatus` 매번 반전이 일어나면 `true`,`false` 값이 `event` 할 때마다 교체되는 것을 볼 수 있다.
+* `true`,`false`가 변경된다면 논리데이터에 따라 서로 다른 결과를 보여줄 수 있는 `if`조건문을 활용 => `if`조건값이 참일 때/ 실행 값 `else`조건값이 거짓일 때 실행 값을 나눠서 동적 스크립트를 작성한다.

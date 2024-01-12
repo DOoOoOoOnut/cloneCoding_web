@@ -31,14 +31,21 @@ small_thum[5].addEventListener('mouseover',function(){
 // 가격 할인 정보 클릭 시 나오는 정보 팝업
 // 1. 팝업 숨기기
 // 2. i를 클릭하면 팝업 보이기
+// 3. 다시 클릭하면 팝업 숨기기
 
 const pop = detail.querySelector('.price .open');
 console.log(pop);
 pop.style = 'display:none';
 const i = detail.querySelector('.price i[class$=info]');
+let info_status = false // 기본이 접힌 상태이므로
 console.log(i);
 i.addEventListener('click',function(){
-    pop.style = 'display:block';
+    if(info_status == false){
+        pop.style = 'display:block';
+    }else{
+        pop.style = 'display:none'
+    }
+    info_status = !info_status;
 })
 
 // 내일 출발 i 클릭 시 팝업 출력하고 팝업 내 X 클릭 시팝업 닫히기 JS
@@ -53,9 +60,15 @@ const del = detail.querySelector('.benefit_shipping .close')
 console.log(pop2, i2, del)
 // 안보이게
 pop2.style = 'display:none';
+let pop2_status = false
 // 실행
 i2.addEventListener('click',function(){
-    pop2.style = 'display:block';
+    if(pop2_status == false){
+        pop2.style = 'display:block';
+    }else{
+        pop2.style = 'display:none';
+    }
+    pop2_status = !pop2_status;
 })
 del.addEventListener('click',function(){
     pop2.style = 'display:none';
@@ -69,10 +82,24 @@ console.log(pop3, open, down)
 // 안보이게
 open.style = 'display:none';
 //실행
+let delivery_menu_open_status = false // 현재 상태 변수 == false - 숨김
 pop3.addEventListener('click',function(){
-    open.style = 'display:flex;'
+    if(delivery_menu_open_status == false){//open
+        console.log(delivery_menu_open_status)
+        open.style = 'display:flex;'
+        pop3.style = 'border-bottom-left-radius: 0; border-bottom-right-radius: 0;'
+        down.style = 'transform: rotate(180deg);'
+        delivery_menu_open_status = !delivery_menu_open_status
+    }else{//close
+        console.log(delivery_menu_open_status)
+        open.style = 'display:none;'
+        pop3.style = 'border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;'
+        down.style = 'transform: rotate(0deg);'
+        delivery_menu_open_status = !delivery_menu_open_status
+    }
+    /* open.style = 'display:flex;'
     pop3.style = 'border-bottom-left-radius: 0; border-bottom-right-radius: 0;'
-    down.style = 'transform: rotate(180deg);'
+    down.style = 'transform: rotate(180deg);' */
 })
 
 // 상품 색상, 사이즈 옵션 선택했을 때 선택 정보가 select result에 결과값으로 출력되고 num_result의 구매 수량에 따라 order-price에 가격이 출력되는 결과 
@@ -128,18 +155,23 @@ const plus_num = document.createElement('span')
 console.log(plus,minus,num);
 // 안보이게 하기
 selectResult.style.display = 'none'
+
+sizeOpt.disabled = true;
+
 colorOpt.addEventListener('change',function(){
     /* console.log(colorOpt.value)
     console.log(colorOpt.options[colorOpt.selectedIndex].text) // 선택한 인덱스값의 텍스트노드 불러오기 */
     color_c.innerHTML = colorOpt.options[colorOpt.selectedIndex].text;
     console.log(color_c);
+    sizeOpt.disabled = false;
 })
 sizeOpt.addEventListener('change',function(){
     console.log(sizeOpt.options[sizeOpt.selectedIndex].text) // 선택한 인덱스값의 텍스트노드 불러오기
     size_c.innerHTML = sizeOpt.options[sizeOpt.selectedIndex].text;
     console.log(size_c);
     //선택옵션 부모 보이기
-    selectResult.style.display = 'grid';
+    selectResult.style.display = 'grid'
+    resultStatus = true;
     // 선택옵션 적용 대상에 위 option 데이터값 출력
     result[0].appendChild(color_c);
     result[1].appendChild(size_c);
@@ -157,29 +189,48 @@ const xxx = selectResult.querySelector('.close');
 console.log(xxx)
 xxx.addEventListener('click',function(){
     xxx.parentElement.style.display = 'none';
+    resultStatus = false;
 })
 let total = 0;
+
+
 // 수량 - + 버튼 클릭 시 수량값 변경되며 그에 따라 가격 변동
-plus.addEventListener('click',function(){
-    // 수량 1 증가
-    num += 1;
-    // 수량 1 증가한 값 표시
-    total_num.value = num;
-    // 수량 * 가격 = 구매가
-    total = num*price;
-    console.log(total); // 확인
-    total_price.innerHTML = total.toLocaleString('ko-kr') + '원';
-    priceTotalView.innerHTML = total.toLocaleString('ko-kr') + '원';
-})
-minus.addEventListener('click',function(){
-    num +=  -1;
+
+const priceCalc = () =>{
     total_num.value = num;
     total = num*price;
-    console.log(total);
-    total_price.innerHTML = total.toLocaleString('ko-kr') + '원';
-    priceTotalView.innerHTML = total.toLocaleString('ko-kr') + '원';
+    return total.toLocaleString('ko-kr') + '원';
+}
+
+plus.addEventListener('click',()=>{
+    if(num < 7){
+        num++
+        total_price.innerHTML = priceCalc();
+        priceTotalView.innerHTML = priceCalc();
+    }else{
+        alert('재고 7개로 더 구매할 수 없습니다.');
+    }
+})
+minus.addEventListener('click',()=>{
+    if(num > 1){
+        num--
+        total_price.innerHTML = priceCalc()
+        priceTotalView.innerHTML = priceCalc()
+    }else{
+        alert('최소 구매 수량입니다.')
+    }
 })
 
+const cartBtn = document.querySelector('#cart')
+const buyBtn = document.querySelector('#buy')
+let resultStatus = false;
 
+cartBtn.addEventListener('click',()=>{
+    if(resultStatus == false){
+        alert('선택된 옵션이 없습니다')
+    }else{
+        alert('장바구니에 상품이 담겼습니다')
+    }
+})
 
 
