@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 | 네이버</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/login.css">
@@ -65,26 +66,26 @@
                         <!-- 내용 탭 2. 일회용번호 -->
                         <div class="login_c disposable_login">
                             <div class="login_num_info">
-                                <p>네이버앱의 <em>메뉴 > 설정<i class="fa-solid fa-gear"></i>> 로그인 아이디 관리 > 더보기 <i class="fa-solid fa-ellipsis-vertical"></i> > 일회용 로그인 번호</em>에 보이는 번호를 입력해 주세요</p>
+                                <p>네이버앱의 <em>메뉴 > 설정<i class="fa-solid fa-gear"></i>> 로그인 아이디 관리 > <br> 더보기 <i class="fa-solid fa-ellipsis-vertical"></i> > 일회용 로그인 번호</em>에 보이는 번호를 입력해 주세요</p>
                                 <p class="sp_more_info"></p>
                             </div>
                             <div class="login_num_input_wrap">
-                                <input type="number" id="login_num_input" placeholder="번호를 입력하세요" maxlength="6">
+                                <input type="text" id="login_num_input" placeholder="번호를 입력하세요" maxlength="6">
                             </div>
+                            <div class="error_massage_d"></div>
                             <div class="login_btn_wrap">
-                                <button type="button" class="loginBtn">로그인</button>
+                                <button type="button" id="loginBtn2">로그인</button>
                             </div>
                         </div>
                         <!-- 내용 탭 3. QR코드 -->
                         <div class="login_c qr_login">
                             <div class="qr_code">
-                                <p class="code_img"><img src="./images/qr.svg" alt="로그인용 QR코드"></p>
-                                <p class="time">남은 시간<br><span>02분 52초</span></p>
+                                <p class="code_img"><img src="./images/qr.svg" alt="로그인용 QR코드"><span class="time"><span>남은 시간</span><em><span>02</span>분 <span>52</span>초</em></span></p>
                             </div>
                             <div class="text_wrap">
-                                <p class="notice">공용 네트워크, 공용 PC라면 안전을 위해 QR코드로 로그인해주세요.</p>
+                                <p class="notice">공용 네트워크, 공용 PC라면 안전을 위해<br> QR코드로 로그인해주세요.</p>
                                 <p class="info">
-                                    네이버 앱<span class="sp_app"></span>>렌즈<span class="sp_lens"></span>를 눌러 QR코드를 스캔하여 보이는 숫자 중 <em class="num"></em>를 선택하면로그인 됩니다. <span class="sp_more_info"></span>
+                                    네이버 앱<span class="sp_app"></span>>렌즈<span class="sp_lens"></span>를 눌러 QR코드를 스캔하여 <br>보이는 숫자 중 <em class="num">21</em>을 선택하면 로그인 됩니다. <span class="sp_more_info"></span>
                                 </p>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 /* 통합 common css */
 /* all */
-#login_wrap {background: aqua; max-width: 743px; position: relative; margin: 0 auto;}
+#login_wrap { max-width: 743px; position: relative; margin: 0 auto;}
 #login_wrap #lang_select {
     position: absolute; right: 0; top: 20px;
     width: 95px; border: 1px solid #ccc;
@@ -21,7 +21,7 @@
 /* footer */
 #login_wrap footer {padding: 50px 0 30px;}
 #login_wrap footer .f_menu {padding-bottom: 10px;}
-#login_wrap footer .f_menu a {color: #888; margin-right: 8px;}
+#login_wrap footer .f_menu a {color: #888; margin-right: 8px; font-size: 0.75rem;}
 #login_wrap footer .f_menu a::after {
     content: ''; display: inline-block;
     background: #888; width: 1px; height: 10px;
