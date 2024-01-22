@@ -1,0 +1,50 @@
+main {}
+/* 왼쪽상단 제목 */
+main .title {position: fixed; left: 50px; top: 50px;}
+main .title h1 {font-size: 2rem; font-weight: 600;}
+/* 왼쪽상단 메뉴 */
+main .title nav {margin-top: 15px; padding-left: 15px;}
+main .title nav .indexBtn {margin-right: 15px; position: relative;}
+main .title nav .indexBtn:hover::after {
+    content: ''; display: block; width: 30px; height: 2px; background-color: #000;
+    position: absolute; bottom: -15px; left: -8px; transition: all 0.5s;
+}
+main .title nav #a {}
+main .title nav #b {}
+main .title nav #c {}
+main .title nav #d {margin: 0;}
+/* 왼쪽 중앙 바 */
+main .bar_wrap {
+    position: fixed; left: 50px; top: 48vh;
+    height: 40px;
+    display: flex; flex-flow: column nowrap; justify-content: space-between;
+}
+main .bar_wrap .bar {
+    background-color: black; width: 20px; height: 2px;
+    transition: all 0.5s;
+}
+main .bar_wrap .bar:hover {background-color: #868686; cursor: pointer;}
+main .bar_wrap .active {background-color: #fff !important; width: 100px !important;}
+main .bar_wrap .b1 {}
+main .bar_wrap .b2 {}
+main .bar_wrap .b3 {}
+main .bar_wrap .b4 {}
+/* 배경 이미지 */
+main .bg_wrap {
+    width: 100%;
+}
+main .bg_wrap .bg {
+    height: 98vh; background-size: cover; background-position: center;
+}
+main .bg_wrap .bg1 {
+    background: url(../images/bg1.jpg);
+}
+main .bg_wrap .bg2 {
+    background: url(../images/bg2.jpg);
+}
+main .bg_wrap .bg3 {
+    background: url(../images/bg3.jpg);
+}
+main .bg_wrap .bg4 {
+    background: url(../images/bg4.jpg);
+}
