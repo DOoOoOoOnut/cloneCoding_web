@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .circle {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            background: #ff0;
+            position: fixed;
+            transform: translate(-50%,-50%);
+            pointer-events: none; /* 이벤트 기능 사용 안함~ 이래야 마우스 동작을 방해하지 않음 */
+        }
+        main {
+            background: radial-gradient(circle,aqua,pink);
+            height: 800px; width: 100%;
+        }
+        /* JS */
+        .design1 {opacity:0.5}
+    </style>
+</head>
+<body>
+    <h1>mouse event</h1>
+    <div class="circle"></div>
+    <main>
+        <a href="https://google.com">google</a>
+    </main>
+    <script>
+        const circle = document.querySelector('.circle')
+        const google_a = document.querySelector('main a')
+        // 이벤트시 일어나는 정보는 매개변수에 담긴다
+        window.addEventListener('mousemove',(e)=>{
+            // console.log(`screenX는 ${e.screenX}, clientX는 ${e.clientX}`)
+            circle.style.left = `${e.clientX}px` // 단위 적어주기
+            circle.style.top = `${e.clientY}px` // 단위 적어주기
+            // console.log(`clientX는 ${e.clientX}`)
+        })
+        //screen은 모니터 크기 위주 client는 뷰포트(내가 보는 화면 기준)
+        google_a.addEventListener('mouseover',()=>{
+            circle.classList.add('design1')
+        })
+        google_a.addEventListener('mouseout',()=>{
+            circle.classList.remove('design1')
+        })
+    </script>
+</body>
+</html>
